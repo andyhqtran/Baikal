@@ -48,6 +48,16 @@ mixin header(type, color)
           // Menu (Element)
           ul.nav__menu
 
+            each link, name in menu.main
+              // Item (Element)
+              li.nav__item: a(href=link)= name
+
+        // Nav (Block)
+        nav.nav.nav--right
+
+          // Menu (Element)
+          ul.nav__menu
+
             each link, name in menu.secondary
               // Item (Element)
               li.nav__item: a(href=link)= name
